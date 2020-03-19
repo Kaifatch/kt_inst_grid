@@ -18,9 +18,8 @@ body {
     grid-template-areas: 
     "header"
     "content";
-    grid-template-rows: 10% 1fr;
-    grid-template-columns: 1fr;
-    grid-gap: 30px;
+    grid-template-rows: 60px 1fr;
+    grid-gap: 10px;
     height: 100vh;
 }
 
@@ -40,8 +39,10 @@ body {
     grid-template-areas: 
     "photo postDesc";
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     border: 1px solid #000;
+    height: 100%;
+    margin-bottom: 20px;
 }
 
 .photo {
@@ -62,7 +63,7 @@ body {
     "description"
     "comments"
     "addcomment";
-    grid-template-rows: 40px 30px 1fr 1fr 50px;
+    grid-template-rows: 40px 30px 1fr 2fr 50px;
 }
 
 .fas, .far {
