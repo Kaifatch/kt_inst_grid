@@ -36,19 +36,9 @@ body {
 
 .pagePost {
     display: grid;
-    grid-template-areas: 
-    "post1"
-    "post2";
-    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
-}
-
-div.post:nth-of-type(1) {
-    grid-area: post1;
-}
-
-div.post:nth-of-type(2) {
-    grid-area: post2;
+    grid-auto-rows: 1fr;
+    grid-gap: 15px;
 }
 
 .fas, .far {
