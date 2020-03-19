@@ -163,5 +163,18 @@ li:not(:first-child) {
 }
 
 .tabs {
-    margin: 0 auto;
+    margin: 10px auto;
+}
+
+.postGrid {
+    grid-area: postGrid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    margin-bottom: 20px;
+}
+
+.postGrid img {
+    width: 400px;
+    border: 1px solid #000;
 }
