@@ -217,7 +217,7 @@ li:not(:first-child) {
     }
 
     .about {
-        grid-template-columns: 60px 1fr;
+        grid-template-columns: 50px 1fr;
         grid-gap: 0 ;
     }
 
@@ -251,14 +251,14 @@ li:not(:first-child) {
     }
 
     .postGrid img {
-        width: 115px;
+        width: 95%;
         border: 1px solid #000;
 }
 
     .postGrid {
-        grid-template-columns: repeat(3, 115px);
-        grid-gap: 10px;
-        margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0;
+        text-align: center;
     }
 
 @media screen and (min-width: 421px) {
