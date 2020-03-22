@@ -41,8 +41,6 @@ body {
 
 .topbar {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -176,4 +174,95 @@ li:not(:first-child) {
 .postGrid img {
     width: 400px;
     border: 1px solid #000;
+}
+
+@media screen and (max-width: 420px) {
+    body {
+        grid-template-areas: 
+        "content"
+        "header";
+    }
+
+    .topbar {
+        bottom: 0;
+        padding: 5px 0;
+        border-bottom: none;
+        border-top: 1px solid #000;
+        justify-content: center;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .menu i {
+        font-size: 40px;
+    }
+
+    .menu img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .menu_items {
+        margin: 0;
+    }
+
+    li:not(:first-child) {
+        margin-left: 50px;
+    }
+
+    .about {
+        grid-template-columns: 60px 1fr;
+        grid-gap: 0 ;
+    }
+
+    .profileAvatar {
+        height: 50px;
+        width: 50px;
+    }
+
+    .profileDescription {
+        grid-template-rows: 30px 15px 30px 1fr;
+    }
+
+    .info a {
+        font-size: 14px;
+    }
+
+    .counters p {
+        font-size: 12px;
+    }
+
+    .profileName {
+        font-size: 25px;
+    }
+
+    .desc p {
+        font-size: 14px;
+    }
+
+    .tabs {
+        margin: 5px auto;
+    }
+
+    .postGrid img {
+        width: 115px;
+        border: 1px solid #000;
+}
+
+    .postGrid {
+        grid-template-columns: repeat(3, 115px);
+        grid-gap: 10px;
+        margin: 0 auto;
+    }
+
+@media screen and (min-width: 421px) {
+    .topbar {
+        top: 0;
+    }
 }

@@ -48,8 +48,6 @@ body {
 
 .topbar {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -175,4 +173,86 @@ li:not(:first-child) {
 textarea {
     resize: none;
     width: 100%;
+}
+
+@media screen and (max-width: 420px) {
+    body {
+        grid-template-areas: 
+        "content"
+        "header";
+    }
+
+    .pagePost {
+        grid-gap: 0;
+    }
+    
+    .post {
+        grid-template-rows: 40px 350px 40px 200px 1fr 50px;
+        border: none;
+        border-bottom: 1px solid #000;
+        margin: 0;
+    }
+
+    .buttons i {
+        font-size: 2em;
+    }
+
+    .buttons i:not(:first-child) {
+        padding-left: 20px;
+    }
+
+    .description {
+        overflow: hidden;
+    }
+
+    .post:last-child {
+        margin-bottom: 60px;
+    }
+
+    .info {
+        padding: 5px 5px;
+    }
+
+    .photo {
+        height: 350px;
+    }
+
+    .topbar {
+        bottom: 0;
+        padding: 5px 0;
+        border-bottom: none;
+        border-top: 1px solid #000;
+        justify-content: center;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .menu i {
+        font-size: 40px;
+    }
+
+    .menu img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .menu_items {
+        margin: 0;
+    }
+
+    li:not(:first-child) {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (min-width: 421px) {
+    .topbar {
+        top: 0;
+    }
 }
