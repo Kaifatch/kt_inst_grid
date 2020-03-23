@@ -63,7 +63,7 @@ body {
     "description"
     "comments"
     "addcomment";
-    grid-template-rows: 40px 30px 1fr 2fr 50px;
+    grid-template-rows: 40px 30px 180px 250px 50px;
 }
 
 .fas, .far {
@@ -73,8 +73,6 @@ body {
 
 .topbar {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -116,6 +114,7 @@ li:not(:first-child) {
 }
 
 .info {
+    grid-area: info;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #000;
@@ -127,12 +126,14 @@ li:not(:first-child) {
 }
 
 .buttons {
+    grid-area: buttons;
     display: flex;
     justify-content: space-between;
     padding: 5px 10px;
 }
 
 .description {
+    grid-area: description;
     padding: 0 10px;
     border-bottom: 1px solid #000;
 }
@@ -144,6 +145,11 @@ li:not(:first-child) {
 
 .description .profile_id {
     font-size: 1.3em;
+}
+
+.comments {
+    grid-area: comments;
+    overflow-y: scroll;
 }
 
 .comment {
@@ -171,4 +177,76 @@ li:not(:first-child) {
 textarea {
     resize: none;
     width: 100%;
+}
+
+@media screen and (max-width: 420px) {
+    body {
+        grid-template-areas: 
+        "content"
+        "header";
+    }
+
+    .topbar {
+        bottom: 0;
+        padding: 5px 0;
+        border-bottom: none;
+        border-top: 1px solid #000;
+        justify-content: center;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .menu i {
+        font-size: 40px;
+    }
+
+    .menu img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .menu_items {
+        margin: 0;
+    }
+
+    li:not(:first-child) {
+        margin-left: 50px;
+    }
+    
+    .post {
+        grid-template-areas: 
+        "photo"
+        "postDesc";
+        grid-template-rows: 200px 1fr;
+        grid-template-columns: 1fr;
+        border: none;
+    }
+
+    .buttons i {
+        font-size: 2em;
+    }
+
+    .buttons i:not(:first-child) {
+        padding-left: 20px;
+    }
+
+    .photo {
+        border: none;
+    }
+
+    .postDesc {
+        grid-template-rows: 40px 40px 150px 200px 50px;
+    }
+}
+
+@media screen and (min-width: 421px) {
+    .topbar {
+        top: 0;
+    }
 }

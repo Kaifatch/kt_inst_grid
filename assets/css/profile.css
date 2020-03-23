@@ -260,6 +260,7 @@ li:not(:first-child) {
         grid-gap: 0;
         text-align: center;
     }
+}
 
 @media screen and (min-width: 421px) {
     .topbar {

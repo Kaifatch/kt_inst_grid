@@ -93,7 +93,7 @@ li:not(:first-child) {
     "description"
     "comments"
     "addcomment";
-    grid-template-rows: 40px 600px 40px 1fr 1fr 50px;
+    grid-template-rows: 40px 600px 40px 150px 200px 50px;
     grid-template-columns: 100%;
     margin-bottom: 20px;
     border: 1px solid #000;
@@ -147,6 +147,7 @@ li:not(:first-child) {
 
 .comments {
     grid-area: comments;
+    overflow-y: scroll;
 }
 
 .comment {
